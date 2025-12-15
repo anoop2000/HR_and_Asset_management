@@ -516,6 +516,7 @@ body {
 --------------------------------*/
 .quick-action-wrapper {
   position: relative;
+  display: inline-block;
 }
 
 .quick-action-btn {
@@ -541,21 +542,22 @@ body {
 
 /* Dropdown card */
 .quick-action-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  right: 0 !important;
   min-width: 180px;
   border-radius: 12px;
   padding: 6px 0;
   background: #fff;
   border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  margin: 0;
+  z-index: 1050 !important;
+  margin: 0 !important;
+  display: block !important;
 }
 
 .quick-action-menu .card-body {
-  padding: 0;
+  padding: 0 !important;
 }
 
 /* Menu items */
