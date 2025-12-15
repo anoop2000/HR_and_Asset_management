@@ -306,7 +306,8 @@ body {
 }
 
 .search-form {
-  width: 100%;
+  width: 65%;
+  /* max-width: 680px; */
 }
 
 .search-input {
@@ -582,5 +583,103 @@ body {
 .quick-action-item:last-child {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+
+/* ------------------------------
+   NOTIFICATION DROPDOWN
+--------------------------------*/
+.notification-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-dropdown-menu {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  right: 0 !important;
+  min-width: 380px;
+  max-width: 450px;
+  border-radius: 12px;
+  padding: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1050 !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+.notification-dropdown-menu .card-body {
+  padding: 0 !important;
+}
+
+.notification-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.notification-badge {
+  background: var(--primary);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.notification-items {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.notification-item:hover {
+  background: rgba(0, 114, 255, 0.08);
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item-title {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.notification-item-time {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.notification-footer {
+  padding: 12px 16px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s ease-in-out;
+}
+
+.notification-footer:hover {
+  background: rgba(0, 114, 255, 0.08);
 }
 

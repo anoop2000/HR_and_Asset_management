@@ -9,11 +9,18 @@ import SvgView from "../svgIcon/svgView.jsx";
 import "../../style/layout.css";
 import SvgIcon from "../svgIcon/svgView.jsx";
 import QuickActionMenu from "../reusable/QuickActionMenu";
+import NotificationDropdown from "../reusable/NotificationDropdown";
 
 const quickActions = [
   { label: "Add Employee", key: "addEmployee" },
   { label: "Add Asset", key: "addAsset" },
   { label: "Upload Document", key: "uploadDocument" },
+];
+
+const notifications = [
+  { title: "5 Documents Expiring Soon", time: "2 hours ago" },
+  { title: "3 Leave Requests Pending", time: "5 hours ago" },
+  { title: "Payroll Processing Due", time: "1 day ago" },
 ];
 
 
@@ -58,10 +65,17 @@ export default function NavigationBar() {
 
 
 
-          <Button variant="light" className="icon-btn notification-btn">
+          <NotificationDropdown
+            title="Notifications"
+            badgeCount={3}
+            items={notifications}
+            footerAction={{
+              label: "View All Notifications",
+              onClick: () => console.log("View all clicked"),
+            }}
+          >
             <SvgView name="notification" size={20} />
-            <span className="notification-dot" />
-          </Button>
+          </NotificationDropdown>
           <div className="profile">
             <div className="avatar"><SvgIcon name="user" size={22} style={{color:"white"}}/></div>
             <div className="profile-text">
