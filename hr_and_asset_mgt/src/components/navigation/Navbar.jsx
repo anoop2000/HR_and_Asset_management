@@ -7,6 +7,8 @@ import {
 } from "react-bootstrap";
 import SvgView from "../svgIcon/svgView.jsx";
 import "../../style/layout.css";
+import SvgIcon from "../svgIcon/svgView.jsx";
+
 
 export default function NavigationBar() {
   return (
@@ -26,7 +28,7 @@ export default function NavigationBar() {
         <Form className="search-form">
           <InputGroup>
             <InputGroup.Text className="search-icon">
-              <span aria-hidden="true">🔍</span>
+              <span aria-hidden="true"><SvgIcon name="search" size={15} /></span>
             </InputGroup.Text>
             <Form.Control
               type="search"
@@ -39,14 +41,14 @@ export default function NavigationBar() {
 
         <div className="topbar-actions">
           <Button variant="light" className="icon-btn">
-            <span className="icon-plus">+</span>
+            <span className="icon-plus"><SvgIcon name="plus" size={15} /></span>
           </Button>
           <Button variant="light" className="icon-btn notification-btn">
             <SvgView name="notification" size={20} />
             <span className="notification-dot" />
           </Button>
           <div className="profile">
-            <div className="avatar">👤</div>
+            <div className="avatar"><SvgIcon name="user" size={22} style={{color:"white"}}/></div>
             <div className="profile-text">
               <div className="welcome">Welcome, Admin User</div>
               <div className="role">Admin</div>

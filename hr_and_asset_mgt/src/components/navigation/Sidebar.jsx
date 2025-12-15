@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Nav,Button } from "react-bootstrap";
 import SvgView from "../svgIcon/svgView.jsx";
 import "../../style/layout.css";
+import SvgIcon from "../svgIcon/svgView.jsx";
 
 const navItems = [
   { key: "Dashboard", icon: "dashboard", label: "Dashboard" },
@@ -15,21 +17,32 @@ const navItems = [
 ];
 
 export default function Sidebar({ activeKey, onSelect }) {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
       <div className="sidebar-brand">
         <div className="brand-icon">HR</div>
-        <div>
+        <div className="brand-text-wrapper">
           <div className="brand-title">HRMS Pro</div>
           <div className="brand-subtitle">UAE Edition</div>
         </div>
         <Button
-            variant="light"
-            className="icon-btn back-btn"
-            aria-label="Back"
-          >
-            <span className="arrow-left" />
-          </Button>
+          variant="light"
+          className="icon-btn back-btn"
+          aria-label={isCollapsed ? "Expand" : "Collapse"}
+          onClick={toggleCollapse}
+        >
+          {isCollapsed ? (
+            <SvgIcon name="arrow-right" size={15} />
+          ) : (
+            <SvgIcon name="arrow-left" size={15} />
+          )}
+        </Button>
       </div>
       <Nav
         className="flex-column sidebar-nav"
@@ -40,10 +53,10 @@ export default function Sidebar({ activeKey, onSelect }) {
           <Nav.Link
             key={item.key}
             eventKey={item.key}
-            className="sidebar-link"
+            className={`sidebar-link ${activeKey === item.key ? "active" : ""}`}
           >
             <SvgView name={item.icon} size={20} />
-            <span>{item.label}</span>
+            <span className="nav-label">{item.label}</span>
           </Nav.Link>
         ))}
       </Nav>
