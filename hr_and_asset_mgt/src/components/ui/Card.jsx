@@ -1,7 +1,7 @@
 
 // src/components/ui/Card.jsx
 import React from "react";
-import "../../styles/layout.css";
+import "../../style/layout.css";
 
 export default function Card({ title, headerRight, children, className = "" }) {
   return (

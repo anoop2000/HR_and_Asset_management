@@ -3,6 +3,7 @@ import { Nav,Button } from "react-bootstrap";
 import SvgView from "../svgIcon/svgView.jsx";
 import "../../style/layout.css";
 import SvgIcon from "../svgIcon/svgView.jsx";
+import Layout from "../LayOut.jsx";
 
 const navItems = [
   { key: "Dashboard", icon: "dashboard", label: "Dashboard" },
