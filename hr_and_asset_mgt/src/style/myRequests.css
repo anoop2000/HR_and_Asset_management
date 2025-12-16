@@ -208,14 +208,3 @@
   }
 } */
 
-@media (max-width: 768px) {
-  .request-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .request-actions {
-    width: 100%;
-    justify-content: flex-end;
-  }
-}

@@ -111,3 +111,286 @@
   }
 }
 
+
+
+
+
+/* =========================
+   QUICK ACTIONS SECTION
+========================= */
+
+.dashboard-quick-actions {
+  margin-top: 32px;
+}
+
+.dashboard-quick-actions-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.dashboard-quick-actions-wrapper {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+
+.dashboard-quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.dashboard-quick-action-card {
+  height: 84px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dashboard-quick-action-card span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+}
+
+
+
+.dashboard-quick-action-card svg {
+  color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard-quick-actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+/* =========================
+   DASHBOARD INFO CARDS
+========================= */
+
+.dashboard-info-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.dashboard-info-card .card-body {
+  padding: 0;
+}
+
+/* ---------- Header ---------- */
+
+.dashboard-info-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dashboard-info-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.dashboard-info-card-title svg {
+  color: #2563eb;
+}
+
+.dashboard-info-card-action {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Body ---------- */
+
+.dashboard-info-card-body {
+  padding: 4px 0;
+}
+
+/* ---------- Rows ---------- */
+
+.dashboard-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.dashboard-info-row:not(:last-child) {
+  border-bottom: 1px solid #f1f3f5;
+}
+
+/* ---------- Left Section ---------- */
+
+.dashboard-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashboard-info-primary {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.dashboard-info-secondary {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Right Section ---------- */
+
+.dashboard-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+/* ---------- Badge ---------- */
+
+.dashboard-info-badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.dashboard-info-badge.warning {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.dashboard-info-badge.danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.dashboard-info-badge.success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* ---------- Date ---------- */
+
+.dashboard-info-date {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---------- Action Buttons (Approvals) ---------- */
+
+.dashboard-info-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-action-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dashboard-action-btn.success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.dashboard-action-btn.danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ---------- Attendance Progress ---------- */
+
+.dashboard-info-progress {
+  width: 100%;
+  padding: 12px 0 0;
+}
+
+.dashboard-info-progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.dashboard-progress-bar {
+    display: flex;
+  height: 8px;
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.dashboard-progress-present {
+  height: 100%;
+  background: #22c55e;
+  
+}
+
+.dashboard-progress-leave {
+  height: 100%;
+  background: #facc15; /* yellow */
+}
+
+.dashboard-progress-absent {
+  height: 100%;
+  background: #ef4444; /* red */
+}
+
+
+/* ---------- Legend ---------- */
+
+.dashboard-progress-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .dashboard-info-row {
+    padding: 12px 16px;
+  }
+
+  .dashboard-info-card-header {
+    padding: 14px 16px;
+  }
+}
+
