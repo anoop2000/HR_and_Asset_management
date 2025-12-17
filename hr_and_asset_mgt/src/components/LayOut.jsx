@@ -15,7 +15,7 @@ import Masters from "../pages/Masters/MastersView.jsx";
 import "../style/layout.css";
 
 export default function Layout() {
-  const [activeKey, setActiveKey] = useState("My Requests");
+  const [activeKey, setActiveKey] = useState("Dashboard");
 
   const renderContent = () => {
     switch (activeKey) {
