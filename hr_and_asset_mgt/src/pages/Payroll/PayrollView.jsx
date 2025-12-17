@@ -1,6 +1,8 @@
 
 
 import React from "react";
+import Card from "../../components/reusable/Card.jsx";
+import SvgIcon from "../../components/svgIcon/svgView";
 import PayrollSummaryCards from "./PayrollCards";
 import PayrollStatus from "./PayrollStatus";
 import PayrollEmployeesTable from "./PayrollTable";
@@ -55,6 +57,30 @@ function Payroll() {
             <PayrollSummaryCards />
             <PayrollStatus />
             <PayrollEmployeesTable employees={payrollEmployeesData}/>
+            <div className="wps-section">
+      <h5 className="wps-title"><SvgIcon name="document" size={20}/> WPS Compliance Tools</h5>
+
+
+      <div className="wps-card-grid">
+        <Card
+          title="Generate SIF File"
+          subtitle="Create salary payment file for banks"
+          className="wps-card"
+        />
+
+        <Card
+          title="MOL Report"
+          subtitle="Ministry of Labour compliance report"
+          className="wps-card"
+        />
+
+        <Card
+          title="Payment History"
+          subtitle="View past payroll transactions"
+          className="wps-card"
+        />
+      </div>
+    </div>
         </div>
     );
 }

@@ -342,3 +342,76 @@
   display: inline-block;
   font-weight: 500;
 }
+
+
+
+
+
+
+/* Section wrapper */
+.wps-section {
+  margin-top: 24px;
+}
+
+.wps-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+/* Card layout */
+.wps-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Base card style */
+.wps-card {
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  background: #ffffff;
+}
+
+/* Hover effect (Figma-like) */
+.wps-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Active / selected card */
+.wps-card.active {
+  border-color: #3b82f6;
+  background: #f0f7ff;
+  box-shadow: 0 8px 22px rgba(59, 130, 246, 0.2);
+}
+
+/* Header styling */
+.wps-card .card-header {
+  background: transparent;
+  border-bottom: none;
+  padding: 16px 16px 8px;
+}
+
+/* Title */
+.wps-card .card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Subtitle */
+.wps-card .card-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Body spacing */
+.wps-card .card-body {
+  padding: 0 16px 16px;
+}
