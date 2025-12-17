@@ -1,0 +1,313 @@
+/* =========================
+   EMPLOYEES HEADER
+========================= */
+
+.employees-header {
+  margin-bottom: 24px;
+}
+
+/* ---------- Top ---------- */
+
+.employees-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.employees-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.employees-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ---------- Add Button ---------- */
+
+.employees-add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.employees-add-btn svg {
+  color: #fff;
+}
+
+/* ---------- Filters Card ---------- */
+
+.employees-filters-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* ---------- Filters Row ---------- */
+
+.employees-filters {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr 0.8fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+/* ---------- Search ---------- */
+
+.employees-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #fff;
+}
+
+.employees-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.employees-search svg {
+  color: var(--muted);
+}
+
+/* ---------- Select Dropdowns ---------- */
+
+.employees-select {
+  height: 42px;
+  padding: 0 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Focus (blue border like Figma) */
+.employees-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ---------- Export ---------- */
+
+.employees-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Count ---------- */
+
+.employees-count {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .employees-filters {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* =========================
+   EMPLOYEES TABLE CARD
+========================= */
+
+.employees-table-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* =========================
+   TABLE BASE
+========================= */
+
+.employees-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employees-table thead {
+  background: #f9fafb;
+}
+
+.employees-table th {
+  text-align: left;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #334155;
+  border-bottom: 1px solid var(--border);
+}
+
+.employees-table td {
+  padding: 18px 20px;
+  font-size: 14px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.employees-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   EMPLOYEE CELL
+========================= */
+
+.employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.employee-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.employee-id {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* =========================
+   DEPARTMENT
+========================= */
+
+.department-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.department-name {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-email {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.contact-phone {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* =========================
+   JOIN DATE
+========================= */
+
+.join-date {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* =========================
+   STATUS PILL
+========================= */
+
+.status-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 999px;
+}
+
+.status-pill.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-pill.on-leave {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.status-pill.inactive {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.actions-col {
+  text-align: right;
+  width: 60px;
+}
+
+.actions-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #64748b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .employees-table th,
+  .employees-table td {
+    padding: 14px 12px;
+  }
+}
+
