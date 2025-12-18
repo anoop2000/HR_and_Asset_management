@@ -1,0 +1,170 @@
+/* ===== HEADER LAYOUT ===== */
+
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 8px 0 20px;
+}
+
+.attendance-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.attendance-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.attendance-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ===== TABS (Daily / Monthly) ===== */
+
+.attendance-tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.attendance-tab {
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  cursor: pointer;
+  color: #111827;
+}
+
+.attendance-tab.active {
+  background: #e0ecff;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+/* ===== ACTION BUTTONS ===== */
+
+.attendance-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Base button */
+.attendance-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  font-weight: 600;
+  border-radius: 10px;
+
+  /* IMPORTANT: override bootstrap primary */
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #d1d5db !important;
+
+  transition: all 0.2s ease;
+}
+
+/* Active (light blue) */
+.attendance-action-btn.is-active {
+  background: #e0ecff !important;
+  color: #2563eb !important;
+  
+}
+
+/* Hover (inactive only) */
+.attendance-action-btn:not(.is-active):hover {
+  background: #f3f4f6 !important;
+  border-color: #9ca3af !important;
+}
+
+/* SVG icon inherits text color */
+.attendance-action-btn svg {
+  fill: currentColor;
+}
+
+
+
+
+
+
+
+
+/* Grid layout */
+.attendance-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Card base */
+.stat-card {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+/* Header (title + icon) */
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Icon */
+.stat-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Main value */
+.stat-value {
+  margin-top: 12px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Percentage */
+.stat-percentage {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Footer text (Total Employees) */
+.stat-footer {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Remove default card header spacing */
+.stat-card .card-header {
+  padding: 0;
+  border-bottom: none;
+}
+
+.stat-card .card-body {
+  padding: 16px 18px;
+}
