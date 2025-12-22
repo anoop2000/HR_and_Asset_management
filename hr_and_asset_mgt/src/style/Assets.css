@@ -1,0 +1,451 @@
+
+/* ===== WRAPPER ===== */
+
+.document-library {
+  padding: 8px 0 24px;
+}
+
+/* ===== HEADER ===== */
+
+.document-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.document-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.document-subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Upload button */
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ===== STATS GRID ===== */
+
+.document-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* ===== STAT CARD ===== */
+
+.document-stat-card {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Remove default card padding */
+.document-stat-card .card-body {
+  padding: 16px 18px;
+}
+
+/* ===== CONTENT ===== */
+
+.document-stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.document-stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #374151;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111827;
+}
+
+.asset-import-btn{
+    display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 400;
+  background-color: #faf8f8;
+  margin-right: -510px;
+  
+}
+
+/* ---------- Filters Card ---------- */
+
+.assets-filters-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* ---------- Filters Row ---------- */
+
+.assets-filters {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr 0.8fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+/* ---------- Search ---------- */
+
+.assets-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #fff;
+}
+
+.assets-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.assets-search svg {
+  color: var(--muted);
+}
+
+/* ---------- Select Dropdowns ---------- */
+
+.assets-select {
+  height: 42px;
+  padding: 0 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+}
+
+.assets-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ---------- Export ---------- */
+
+.assets-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Count ---------- */
+
+.assets-count {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .assets-filters {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* ---------- Table Wrapper ---------- */
+
+.assets-table {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 25px;
+}
+
+/* ---------- Base Table ---------- */
+
+.data-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #667085;
+  background: #f9fafb;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Asset Cell ---------- */
+
+.asset-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.asset-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #e6efff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+}
+
+.asset-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.asset-sub {
+  font-size: 13px;
+  color: #667085;
+}
+
+/* ---------- Generic stacked cells ---------- */
+
+.cell-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cell-primary {
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.cell-secondary {
+  font-size: 13px;
+  color: #667085;
+}
+
+/* ---------- Status Pills ---------- */
+
+.status-pill {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.status-in-use {
+  background: #ecfdf3;
+  color: #16a34a;
+}
+
+.status-available {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.status-maintenance {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+/* ---------- Actions ---------- */
+
+.action-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------- Layout ---------- */
+
+.asset-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* ---------- Card ---------- */
+
+.asset-action-card {
+  padding: 0;
+}
+
+/* Override default card body spacing */
+.asset-action-card .card-body {
+  padding: 20px;
+}
+
+/* ---------- Content ---------- */
+
+.action-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ---------- Icon ---------- */
+
+.action-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.action-icon.primary {
+  background: #e6efff;
+  color: #2563eb;
+}
+
+.action-icon.success {
+  background: #ecfdf3;
+  color: #16a34a;
+}
+
+.action-icon.warning {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+/* ---------- Text ---------- */
+
+.action-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #101828;
+}
+
+.action-text p {
+  font-size: 14px;
+  color: #475467;
+  margin-bottom: auto;
+}
+
+/* ---------- Button ---------- */
+
+.action-btn {
+  margin-top: 16px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+/* Button variants */
+
+.action-btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.action-btn-success {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.action-btn-warning {
+  background: #d97706;
+  color: #ffffff;
+}
+
+/* Icon + Title row */
+.action-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+/* Title */
+.action-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #101828;
+  margin: -1;
+}
+
+/* Description below title */
+.action-description {
+  font-size: 14px;
+  color: #475467;
+  margin-bottom: auto;
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .asset-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
