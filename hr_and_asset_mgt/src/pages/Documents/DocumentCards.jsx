@@ -2,31 +2,32 @@
 import Card from "../../components/reusable/Card";
 import AppButton from "../../components/reusable/Button";
 import SvgIcon from "../../components/svgIcon/svgView.jsx";
-import "../../style/DocumentLibrary.css";
+import "../../style/Document.css";
+
 
 const stats = [
   {
     title: "Total Documents",
     value: 6,
-    icon: "file",
+    icon: "document (1)",
     iconColor: "#2563eb",
   },
   {
     title: "Valid",
     value: 3,
-    icon: "file-check",
+    icon: "document (1)",
     iconColor: "#16a34a",
   },
   {
     title: "Expiring Soon",
     value: 3,
-    icon: "alert-circle",
+    icon: "exclamation",
     iconColor: "#f59e0b",
   },
   {
     title: "Expired",
     value: 0,
-    icon: "alert-circle",
+    icon: "exclamation",
     iconColor: "#dc2626",
   },
 ];

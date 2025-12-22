@@ -73,12 +73,388 @@
 
 .stat-title {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: #374151;
 }
 
 .stat-value {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
   color: #111827;
 }
+
+
+
+
+
+/* ===== DOCUMENT LIST ===== */
+.doc-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doc-icon {
+  width: 36px;
+  height: 36px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.doc-title {
+  font-weight: 600;
+}
+
+.doc-sub {
+  font-size: 12px;
+  color:black;
+}
+
+.primary {
+  font-weight: 500;
+}
+
+.secondary {
+  font-size: 12px;
+  color: black;
+}
+
+/* Status Pills */
+.status-badge {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.status-valid {
+  background: #ecfdf3;
+  color: #16a34a;
+}
+
+.status-warning {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.status-critical {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Actions */
+.action-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;     
+  justify-content: center;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.action-icons svg {
+  display: block;          
+}
+
+
+.action-icons .danger {
+    display: flex;           
+  align-items: center;
+  color: #dc2626;
+}
+
+
+
+
+.documents-filter {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 20px;
+}
+
+/* Top Row */
+.filter-controls {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Search */
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Dropdowns */
+.filter-controls select {
+  min-width: 160px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Footer */
+.filter-footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count-text {
+  font-size: 14px;
+  color: #344054;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  background: #f2f4f7;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.view-toggle button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  color: #667085;
+}
+
+.view-toggle button.active {
+  background: #e6efff;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+
+
+
+/* Document Grid */
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.document-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-icon {
+  width: 44px;
+  height: 44px;
+  background: #e6efff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+}
+
+/* Status */
+.grid-status {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.grid-status-valid {
+  background: #ecfdf3;
+  color: #16a34a;
+}
+
+.grid-status-warning {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.grid-status-critical {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Text */
+.card-title {
+  margin: 16px 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-location {
+  font-size: 14px;
+  color: #475467;
+}
+
+/* Meta (Key - Value rows) */
+.card-meta {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.meta-label {
+  font-size: 13px;
+  color: #667085;
+}
+
+.meta-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.meta-value.danger {
+  color: #dc2626;
+}
+
+/* Divider */
+.card-divider {
+  margin: 20px 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* Actions */
+.card-actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* View button */
+.btn-view {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Download button */
+.btn-download {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 12px;
+  background-color: #8f91f6;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+
+
+/* Outer Card */
+.expiry-reminders-card {
+  padding: -40px;
+  margin-top: 25px;
+}
+
+/* Section Header */
+.expiry-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.expiry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual Reminder Card */
+.expiry-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* Title */
+.expiry-item h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #101828;
+  margin: 0;
+}
+
+/* Message */
+.expiry-message {
+  font-size: 14px;
+  color: #344054;
+  margin: 0;
+}
+
+/* Recipients */
+.expiry-recipients {
+  font-size: 13px;
+  color: #667085;
+  margin-top: auto;
+}
+
+
+
+
+
