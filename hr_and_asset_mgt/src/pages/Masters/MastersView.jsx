@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import MastersTabs from "./MastersTabs";
 
-import CompanyStructure from "./CompanyStructure";
-import HRManagement from "./HRManagement";
+import CompanyStructure from "./CompanyStructure/CompanyStructure";
+import HRManagement from "./HRManagement/HRManagement";
 import AssetManagement from "./AssetManagement";
 import SystemSettings from "./SystemSettings";
 
 import "../../style/Masters.css";
 
 export default function MastersPage() {
-  const [activeTab, setActiveTab] = useState("company");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeTab = searchParams.get("tab") || "company";
+
+  const handleTabChange = (tabId) => {
+    setSearchParams({ tab: tabId });
+  };
 
   const renderContent = () => {
     switch (activeTab) {
@@ -22,7 +27,7 @@ export default function MastersPage() {
       case "system":
         return <SystemSettings />;
       default:
-        return null;
+        return <CompanyStructure />;
     }
   };
 
@@ -38,7 +43,7 @@ export default function MastersPage() {
       </div>
 
       {/* Tabs */}
-      <MastersTabs activeTab={activeTab} onChange={setActiveTab} />
+      <MastersTabs activeTab={activeTab} onChange={handleTabChange} />
 
       {/* Content Container */}
       <div className="masters-content">

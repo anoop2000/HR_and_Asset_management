@@ -16,7 +16,7 @@ app.use(
   cors({
     origin: true, // allow all origins
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
@@ -40,7 +40,21 @@ console.log("✅ Attendance routes registered at /api/attendance");
 
 // 🔹 Request APIs
 app.use("/api/requests", requestRoutes);
-console.log("✅ Request routes registered at /api/requests");
+// 🔹 Unified Master API
+import masterRoutes from "./routes/masterRoutes.js";
+app.use("/api/masters", masterRoutes);
+console.log("✅ Unified Master routes registered at /api/masters");
+
+// 🔹 System Settings API
+import systemSettingsRoutes from "./routes/systemSettingsRoutes.js";
+app.use("/api/system-settings", systemSettingsRoutes);
+console.log("✅ System Settings routes registered at /api/system-settings");
+
+// 🔹 Company Documents API
+import companyDocRoutes from "./routes/companyDocRoutes.js";
+app.use("/api/documents", companyDocRoutes);
+// Serve uploaded files statically
+app.use("/uploads", express.static("uploads"));
 
 // 🔹 Asset APIs
 app.use("/api/assets", assetRoutes);

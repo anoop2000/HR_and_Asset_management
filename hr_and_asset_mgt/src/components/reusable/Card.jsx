@@ -14,4 +14,3 @@ export default function Card({ title, subtitle, children, className = "" }) {
     </RBCard>
   );
 }
-
